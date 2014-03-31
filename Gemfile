@@ -23,6 +23,8 @@ gem 'pundit'
 
 gem 'redcarpet'
 
+gem 'will_paginate', '~> 3.0.5'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
