@@ -1,20 +1,29 @@
 <h1><%= markdown @post.title %></h1>
 
 <div class="row">
-  <div class="col-md-8">
+  <div class="span8">
+    <small>
+      submitted <%= time_ago_in_words(@post.created_at) %> ago by 
+      <%= @post.user.name %>
+    </small>
     <p><%= markdown @post.body %></p>
-  </div>
-
-    <h4><%= @comments.count %> Comments</h4> 
-
-    <div> 
-      <%= @post.comments %>
-    </div>
-  <div class="col-md-4">
+  <div class="span4">
     <% if policy(@post).edit? %>
       <%= link_to "Edit", edit_topic_post_path(@topic,@post), class: 'btn btn-success' %>
     <% end %>
   </div>
+    
+    
+    <hr/>
+
+    <h3><%= @comments.count %> Comments</h3>
+    
+    <%= render partial: 'comments/comment', collection: @comments %>
+    
+    <% if policy(Comment).create? %>
+      <h4>Add Comment</h4>
+      <%= render partial: 'comments/form', locals: { topic: @topic, post: @post, comment: @comment } %>
+    <% end %>
+  
+  </div>
 </div>
-
-
