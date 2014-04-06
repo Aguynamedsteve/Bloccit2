@@ -53,14 +53,15 @@ class TopicsController < ApplicationController
       flash[:error] = "There was an error deleting the topic."
       render :show
     end
+
+private
+    
+    def topic_params
+      params.require(:topic).permit(:name, :description, :public)
+    end
   end
 end
 
-private
-  
-  def topic_params
-    params.require(:topic).permit(:name, :description, :public)
-  end
 
 
 
