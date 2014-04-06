@@ -8,7 +8,7 @@ class VotesController < ApplicationController
 
   def down_vote
     update_vote(-1)
-    redirect_to
+    redirect_to :back
   end
 
 private
