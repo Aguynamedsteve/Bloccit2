@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140406203901) do
+ActiveRecord::Schema.define(version: 20140407172153) do
 
   create_table "comments", force: true do |t|
     t.text     "body"
@@ -32,6 +32,13 @@ ActiveRecord::Schema.define(version: 20140406203901) do
 
   add_index "favorites", ["post_id"], name: "index_favorites_on_post_id"
   add_index "favorites", ["user_id"], name: "index_favorites_on_user_id"
+
+  create_table "notifications", force: true do |t|
+    t.string   "headline"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "posts", force: true do |t|
     t.string   "title"
