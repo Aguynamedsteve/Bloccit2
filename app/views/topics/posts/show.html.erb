@@ -24,13 +24,13 @@
       <%= render partial: 'favorites/favorite', locals: { topic: @topic, post: @post } %>
   </div>
     
-    
     <hr/>
 
-    <h3><%= @comments.count %> Comments</h3>
-    
+    <h2 class='js-comments-count'><%= @comments.count %> Comments</h2>
+    <div class="js-comments">
     <%= render partial: 'comments/comment', collection: @comments %>
-    
+    </div>
+
     <% if policy(Comment).create? %>
       <h4>Add Comment</h4>
       <%= render partial: 'comments/form', locals: { topic: @topic, post: @post, comment: @comment } %>
