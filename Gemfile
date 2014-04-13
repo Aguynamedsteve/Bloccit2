@@ -20,6 +20,10 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.0'
 end
 
+gem 'figaro'
+gem 'fog'
+gem 'carrierwave'
+gem 'mini_magick'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'faker'
 gem 'devise'

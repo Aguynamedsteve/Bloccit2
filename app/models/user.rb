@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
   has_many :favorites, dependent: :destroy
   has_many :votes, dependent: :destroy
 
+  mount_uploader :avatar, AvatarUploader
+
   def self.top_rated
     self.select('users.*').
         select('COUNT(DISTINCT comments.id) AS comments_count').
