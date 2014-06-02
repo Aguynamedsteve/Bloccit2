@@ -20,3 +20,4 @@ public/uploads
 
 /config/application.yml
 
+/config/initializers/app_environment_variables.rb
