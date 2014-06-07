@@ -20,6 +20,7 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.0'
 end
 
+gem 'thin'
 gem 'figaro'
 gem 'fog'
 gem 'carrierwave'
