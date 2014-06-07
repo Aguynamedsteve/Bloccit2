@@ -20,7 +20,8 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.0'
 end
 
-gem 'thin'
+gem 'unicorn'
+gem 'unicorn-rails'
 gem 'figaro'
 gem 'fog'
 gem 'carrierwave'
@@ -62,7 +63,6 @@ end
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
-# gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
