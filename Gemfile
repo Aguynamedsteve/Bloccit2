@@ -20,6 +20,7 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.0'
 end
 
+gem 'asset_sync'
 gem 'unicorn'
 gem 'unicorn-rails'
 gem 'figaro'
