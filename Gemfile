@@ -7,6 +7,7 @@ gem 'rails', '4.0.3'
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'asset_sync'
 end
 
 group :development do
@@ -20,7 +21,6 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.0'
 end
 
-gem 'asset_sync'
 gem 'unicorn'
 gem 'unicorn-rails'
 gem 'figaro'
