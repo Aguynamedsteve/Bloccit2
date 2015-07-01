@@ -10,6 +10,8 @@ class UsersController < ApplicationController
     @posts = @user.posts.visible_to(current_user)
   end
 
+  private
+
   def update
     if current_user.update_attributes(user_params)
       flash[:notice] = "User information updated"

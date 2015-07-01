@@ -11,11 +11,11 @@ class VotesController < ApplicationController
     redirect_to :back
   end
 
-
+  private
+  
   def setup
     @topic = Topic.find(params[:topic_id])
     @post = @topic.posts.find(params[:post_id])
-
     @vote = @post.votes.where(user_id: current_user.id).first
   end
 
